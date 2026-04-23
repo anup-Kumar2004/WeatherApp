@@ -83,7 +83,6 @@
 - Warm peach gradient theme throughout
 - **Shimmer skeleton** loading animation
 - **Pull-to-refresh** support
-- Edge-to-edge display on all Android versions
 
 </td>
 <td width="50%">
@@ -92,7 +91,6 @@
 - **MVVM architecture** with LiveData
 - Parallel API calls with Kotlin **Coroutines**
 - Responsive across all screen sizes
-- Status bar color adapted per Android API level
 
 </td>
 </tr>
@@ -261,7 +259,7 @@ implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
 <div align="center">
 
-Built with ❤️ as part of an Android development journey.
+Built with ❤️ as part of my Android development journey.
 
 *This project demonstrates real-world Android development skills including:*
 *MVVM architecture · REST API integration · modern UI design · location services · Kotlin coroutines*
