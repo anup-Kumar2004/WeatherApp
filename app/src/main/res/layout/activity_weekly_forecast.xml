@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootWeekly"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- ── Back button ── -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/weekly_back_btn_size"
+        android:layout_height="@dimen/weekly_back_btn_size"
+        android:layout_marginStart="@dimen/weekly_back_margin_start"
+        android:layout_marginTop="@dimen/weekly_back_margin_top"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#40FFFFFF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/weekly_back_icon_size"
+            android:layout_height="@dimen/weekly_back_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back_arrow"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ── Screen title ── -->
+    <TextView
+        android:id="@+id/tvScreenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next_7_days_second"
+        android:textColor="#1C1C1C"
+        android:textSize="@dimen/weekly_screen_title_text_size"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ── Weekly forecast list ── -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWeekly"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/weekly_rv_margin_top"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/weekly_rv_padding_bottom"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardHourlyItem"
+    android:layout_width="@dimen/hourly_item_width"
+    android:layout_height="@dimen/hourly_item_height"
+    android:layout_marginEnd="@dimen/hourly_item_margin_end"
+    app:cardBackgroundColor="@color/normal_bg_for_hourly_item_selected_card"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TIME -->
+        <TextView
+            android:id="@+id/tvHourlyTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hourly_time_margin_top"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/color2_gray"
+            android:textSize="@dimen/hourly_time_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/_13_00" />
+
+        <!-- WEATHER ICON -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ivHourlyIcon"
+            android:layout_width="@dimen/hourly_icon_size"
+            android:layout_height="@dimen/hourly_icon_size"
+            android:contentDescription="@string/hourly_weather_icon"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- TEMPERATURE -->
+        <TextView
+            android:id="@+id/tvHourlyTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/hourly_temp_margin_bottom"
+            android:textSize="@dimen/hourly_temp_text_size"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/color1_black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@string/_21" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

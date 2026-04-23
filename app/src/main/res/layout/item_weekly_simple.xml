@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/weekly_simple_margin_horizontal"
+    android:layout_marginTop="@dimen/weekly_simple_margin_top"
+    app:cardBackgroundColor="#fcd4ac"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/weekly_simple_padding_horizontal"
+        android:paddingVertical="@dimen/weekly_simple_padding_vertical">
+
+        <!-- Day name -->
+        <TextView
+            android:id="@+id/tvSimpleDayName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/weekly_simple_day_margin_start"
+            android:layout_weight="1"
+            android:textColor="#000a2b"
+            android:textSize="@dimen/weekly_simple_day_text_size"
+            android:fontFamily="sans-serif-medium"/>
+
+        <!-- Min / Max temp -->
+        <TextView
+            android:id="@+id/tvSimpleTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/weekly_simple_temp_margin_end"
+            android:textColor="#000a2b"
+            android:textSize="@dimen/weekly_simple_temp_text_size"
+            android:fontFamily="sans-serif-medium"/>
+
+        <!-- Weather icon -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ivSimpleIcon"
+            android:layout_width="@dimen/weekly_simple_icon_size"
+            android:layout_height="@dimen/weekly_simple_icon_size"
+            android:contentDescription="Weather icon"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

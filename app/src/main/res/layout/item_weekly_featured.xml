@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/weekly_featured_margin_horizontal"
+    android:layout_marginTop="@dimen/weekly_featured_margin_top"
+    android:layout_marginBottom="@dimen/weekly_featured_margin_bottom"
+    app:cardBackgroundColor="#fee7d4"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/weekly_featured_padding">
+
+        <!-- ── Top row: label + temp + icon ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- "Tomorrow" label -->
+            <TextView
+                android:id="@+id/tvFeaturedLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tomorrow_text"
+                android:layout_marginStart="@dimen/weekly_featured_label_margin_start"
+                android:textColor="#000a2b"
+                android:textSize="@dimen/weekly_featured_label_text_size"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Min / Max temp -->
+            <TextView
+                android:id="@+id/tvFeaturedTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/weekly_featured_temp_margin_end"
+                android:textColor="#000a2b"
+                android:textSize="@dimen/weekly_featured_temp_text_size"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Weather icon -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ivFeaturedIcon"
+                android:layout_width="@dimen/weekly_featured_icon_size"
+                android:layout_height="@dimen/weekly_featured_icon_size"
+                android:contentDescription="Weather icon"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"/>
+
+        </LinearLayout>
+
+        <!-- ── Divider ── -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/weekly_divider_margin_vertical"
+            android:layout_marginBottom="@dimen/weekly_divider_margin_vertical"
+            android:layout_marginHorizontal="@dimen/weekly_divider_margin_horizontal"
+            android:background="#20000000"/>
+
+        <!-- ── Bottom row: rainfall / wind / humidity ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/weekly_stats_margin_horizontal"
+            android:layout_marginBottom="@dimen/weekly_stats_margin_bottom"
+            android:orientation="horizontal">
+
+            <!-- Rainfall -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/weekly_stat_icon_size"
+                    android:layout_height="@dimen/weekly_stat_icon_size"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/weekly_stat_lottie_size"
+                        android:layout_height="@dimen/weekly_stat_lottie_size"
+                        android:layout_gravity="center"
+                        android:contentDescription="Rainfall"
+                        app:lottie_rawRes="@raw/lottie_umbrella"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvFeaturedPrecipitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/weekly_stat_label_margin_top"
+                    android:textColor="#000a2b"
+                    android:textSize="@dimen/weekly_stat_label_text_size"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <!-- Wind -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/weekly_stat_icon_size"
+                    android:layout_height="@dimen/weekly_stat_icon_size"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/weekly_stat_lottie_size"
+                        android:layout_height="@dimen/weekly_stat_lottie_size"
+                        android:layout_gravity="center"
+                        android:contentDescription="Wind"
+                        app:lottie_rawRes="@raw/lottie_windmill"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvFeaturedWind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/weekly_stat_label_margin_top"
+                    android:textColor="#000a2b"
+                    android:textSize="@dimen/weekly_stat_label_text_size"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+            <!-- Humidity -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/weekly_stat_icon_size"
+                    android:layout_height="@dimen/weekly_stat_icon_size"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/weekly_stat_lottie_size"
+                        android:layout_height="@dimen/weekly_stat_lottie_size"
+                        android:layout_gravity="center"
+                        android:contentDescription="Humidity"
+                        app:lottie_rawRes="@raw/lottie_raindrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvFeaturedHumidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/weekly_stat_label_margin_top"
+                    android:textColor="#000a2b"
+                    android:textSize="@dimen/weekly_stat_label_text_size"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

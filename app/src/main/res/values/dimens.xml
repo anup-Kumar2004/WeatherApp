@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── activity_main.xml ── -->
+    <dimen name="screen_horizontal_margin">24dp</dimen>
+    <dimen name="city_name_margin_top">20dp</dimen>
+    <dimen name="city_name_margin_end">12dp</dimen>
+    <dimen name="weather_icon_size">150dp</dimen>
+    <dimen name="temp_text_size">60sp</dimen>
+    <dimen name="temp_margin_top">25dp</dimen>
+    <dimen name="temp_unit_text_size">18sp</dimen>
+    <dimen name="city_name_text_size">30sp</dimen>
+    <dimen name="date_text_size">14sp</dimen>
+    <dimen name="date_margin_top">6dp</dimen>
+    <dimen name="condition_text_size">15sp</dimen>
+    <dimen name="info_card_height">65dp</dimen>
+    <dimen name="card_padding_start">20dp</dimen>
+    <dimen name="card_padding_end">35dp</dimen>
+    <dimen name="info_card_spacing">10dp</dimen>
+    <dimen name="info_card_margin_top">30dp</dimen>
+    <dimen name="card_label_margin_start">14dp</dimen>
+    <dimen name="tab_margin_top">35dp</dimen>
+    <dimen name="tab_between_spacing">22dp</dimen>
+    <dimen name="hourly_item_width">60dp</dimen>
+    <dimen name="hourly_item_height">100dp</dimen>
+    <dimen name="hourly_margin_top">20dp</dimen>
+    <dimen name="hourly_item_margin_end">10dp</dimen>
+    <dimen name="hourly_time_margin_top">15dp</dimen>
+    <dimen name="hourly_time_text_size">11sp</dimen>
+    <dimen name="hourly_icon_size">32dp</dimen>
+    <dimen name="hourly_temp_margin_bottom">10dp</dimen>
+    <dimen name="hourly_temp_text_size">12sp</dimen>
+    <dimen name="search_btn_size">48dp</dimen>
+    <dimen name="icon_bg_size">44dp</dimen>
+    <dimen name="card_text_size">15sp</dimen>
+    <dimen name="tab_text_size">16sp</dimen>
+
+    <!-- ── dialog_search_city.xml ── -->
+    <dimen name="search_dialog_padding_horizontal">20dp</dimen>
+    <dimen name="search_dialog_padding_top">12dp</dimen>
+    <dimen name="search_dialog_padding_bottom">24dp</dimen>
+    <dimen name="search_handle_width">40dp</dimen>
+    <dimen name="search_handle_margin_top">4dp</dimen>
+    <dimen name="search_handle_margin_bottom">20dp</dimen>
+    <dimen name="search_title_text_size">22sp</dimen>
+    <dimen name="search_title_margin_bottom">16dp</dimen>
+    <dimen name="search_input_height">56dp</dimen>
+    <dimen name="search_icon_size">20dp</dimen>
+    <dimen name="search_input_margin_start">10dp</dimen>
+    <dimen name="search_input_text_size">16sp</dimen>
+    <dimen name="search_hint_text_size">14sp</dimen>
+    <dimen name="search_hint_margin_top">20dp</dimen>
+    <dimen name="search_hint_margin_bottom">8dp</dimen>
+    <dimen name="search_results_margin_top">12dp</dimen>
+
+    <!-- ── item_search_result.xml ── -->
+    <dimen name="result_item_margin_bottom">8dp</dimen>
+    <dimen name="result_item_padding_horizontal">16dp</dimen>
+    <dimen name="result_item_padding_vertical">14dp</dimen>
+    <dimen name="result_icon_size">18dp</dimen>
+    <dimen name="result_icon_margin_end">12dp</dimen>
+    <dimen name="result_city_text_size">15sp</dimen>
+    <dimen name="result_country_text_size">12sp</dimen>
+    <dimen name="result_country_margin_top">2dp</dimen>
+
+    <!-- ── activity_weekly_forecast.xml ── -->
+    <!-- Baseline = 360dp phone (screenshot 1). Scaled DOWN ~20% for very small phones. -->
+    <dimen name="weekly_back_btn_size">34dp</dimen>
+    <dimen name="weekly_back_icon_size">18dp</dimen>
+    <dimen name="weekly_back_margin_start">16dp</dimen>
+    <dimen name="weekly_back_margin_top">18dp</dimen>
+    <dimen name="weekly_screen_title_text_size">14sp</dimen>
+    <dimen name="weekly_rv_margin_top">12dp</dimen>
+    <dimen name="weekly_rv_padding_bottom">18dp</dimen>
+
+    <!-- ── item_weekly_featured.xml ── -->
+    <dimen name="weekly_featured_margin_horizontal">14dp</dimen>
+    <dimen name="weekly_featured_margin_top">10dp</dimen>
+    <dimen name="weekly_featured_margin_bottom">14dp</dimen>
+    <dimen name="weekly_featured_padding">14dp</dimen>
+    <dimen name="weekly_featured_label_text_size">12sp</dimen>
+    <dimen name="weekly_featured_label_margin_start">2dp</dimen>
+    <dimen name="weekly_featured_temp_text_size">12sp</dimen>
+    <dimen name="weekly_featured_temp_margin_end">8dp</dimen>
+    <dimen name="weekly_featured_icon_size">44dp</dimen>
+    <dimen name="weekly_divider_margin_vertical">11dp</dimen>
+    <dimen name="weekly_divider_margin_horizontal">6dp</dimen>
+    <dimen name="weekly_stats_margin_horizontal">26dp</dimen>
+    <dimen name="weekly_stats_margin_bottom">6dp</dimen>
+    <dimen name="weekly_stat_icon_size">30dp</dimen>
+    <dimen name="weekly_stat_lottie_size">22dp</dimen>
+    <dimen name="weekly_stat_label_text_size">7sp</dimen>
+    <dimen name="weekly_stat_label_margin_top">3dp</dimen>
+
+    <!-- ── item_weekly_simple.xml ── -->
+    <dimen name="weekly_simple_margin_horizontal">14dp</dimen>
+    <dimen name="weekly_simple_margin_top">6dp</dimen>
+    <dimen name="weekly_simple_padding_horizontal">14dp</dimen>
+    <dimen name="weekly_simple_padding_vertical">10dp</dimen>
+    <dimen name="weekly_simple_day_text_size">10sp</dimen>
+    <dimen name="weekly_simple_day_margin_start">2dp</dimen>
+    <dimen name="weekly_simple_temp_text_size">10sp</dimen>
+    <dimen name="weekly_simple_temp_margin_end">10dp</dimen>
+    <dimen name="weekly_simple_icon_size">30dp</dimen>
+
+</resources>

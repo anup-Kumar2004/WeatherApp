@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- General skeleton placeholder: rounded rectangle with warm semi-transparent fill -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#40C87B52" />
+    <corners android:radius="16dp" />
+</shape>

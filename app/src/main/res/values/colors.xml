@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="orange">#FF9800</color>
+    <color name="purple">#9C27B0</color>
+    <color name="pink">#E91E63</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="teal">#009688</color>
+    <color name="lime">#CDDC39</color>
+    <color name="amber">#FFC107</color>
+    <color name="brown">#795548</color>
+    <color name="gray">#9E9E9E</color>
+
+    <!-- Red Shades -->
+    <color name="red_light">#FFCDD2</color>
+    <color name="red_dark">#D32F2F</color>
+    <color name="red_deep">#B71C1C</color>
+
+    <!-- Blue Shades -->
+    <color name="blue_light">#BBDEFB</color>
+    <color name="blue_dark">#1976D2</color>
+    <color name="blue_deep">#0D47A1</color>
+
+    <!-- Green Shades -->
+    <color name="green_light">#C8E6C9</color>
+    <color name="green_dark">#388E3C</color>
+    <color name="green_deep">#1B5E20</color>
+
+    <!-- Purple Shades -->
+    <color name="purple_light">#E1BEE7</color>
+    <color name="purple_dark">#7B1FA2</color>
+    <color name="purple_deep">#4A148C</color>
+
+    <!-- Orange Shades -->
+    <color name="orange_light">#FFE0B2</color>
+    <color name="orange_dark">#F57C00</color>
+    <color name="orange_deep">#E65100</color>
+
+    <!-- Pink Shades -->
+    <color name="pink_light">#F8BBD0</color>
+    <color name="pink_dark">#C2185B</color>
+
+    <!-- Neutral Shades -->
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_dark">#616161</color>
+
+
+
+
+    <!-- custom app specific colors -->
+    <color name="background_shade1">#fee5ca</color>
+    <color name="background_shade2">#fbbc88</color>
+    <color name="background_shade3">#fdbe93</color>
+    <color name="background_card_view_semi_transparent">#fddcc3</color>
+    
+    <!-- bottom hourly recycler view card view colors -->
+    <color name="normal_bg_for_hourly_item_selected_card">#fed0a8</color>
+    <color name="selected_bg_for_hourly_item_selected_card">#ffebda</color>
+    <color name="color1_black">#353747</color>
+    <color name="color2_gray">#C4BFC5</color>
+    
+    
+
+
+
+
+
+</resources>

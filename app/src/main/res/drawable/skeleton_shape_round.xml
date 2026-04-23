@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Skeleton for square buttons: highly rounded corners to look circular -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#40C87B52" />
+    <corners android:radius="14dp" />
+</shape>

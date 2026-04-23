@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient">
+
+        <!-- ========== CITY NAME ========== -->
+
+        <TextView
+            android:id="@+id/tvCityName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/city_name_margin_top"
+            android:layout_marginEnd="@dimen/city_name_margin_end"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingMultiplier=".9"
+            android:textColor="#1C1C1C"
+            android:textSize="@dimen/city_name_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnSearch"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/delhi_india" />
+
+
+        <!-- ========== SEARCH BUTTON ========== -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/search_btn_size"
+            android:layout_height="@dimen/search_btn_size"
+            android:visibility="invisible"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#40FFFFFF"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvCityName"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/search_city"
+                android:src="@drawable/search_icon"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ========== DATE ========== -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/date_margin_top"
+            android:fontFamily="sans-serif"
+            android:textColor="#80573C"
+            android:textSize="@dimen/date_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCityName"
+            tools:text="@string/sat_apr_04" />
+
+        <!-- ========== WEATHER ICON ========== -->
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ivWeatherIcon"
+            android:layout_width="@dimen/weather_icon_size"
+            android:layout_height="@dimen/weather_icon_size"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/info_card_margin_top"
+            android:contentDescription="@string/weather_icon"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+        <!-- ========== TEMPERATURE NUMBER ========== -->
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/temp_margin_top"
+            android:fontFamily="sans-serif-light"
+            android:includeFontPadding="false"
+            android:textColor="#1A1A2E"
+            android:textSize="@dimen/temp_text_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivWeatherIcon"
+            app:layout_constraintTop_toTopOf="@id/ivWeatherIcon"
+            tools:text="@string/_19" />
+
+        <!-- ========== °C UNIT ========== -->
+        <TextView
+            android:id="@+id/tvTempUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/c"
+            android:textColor="#1A1A2E"
+            android:textSize="@dimen/temp_unit_text_size"
+            app:layout_constraintStart_toEndOf="@id/tvTemperature"
+            app:layout_constraintTop_toTopOf="@id/tvTemperature" />
+
+        <!-- ========== WEATHER CONDITION LABEL ========== -->
+        <TextView
+            android:id="@+id/tvWeatherCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:textColor="#5D3A2A"
+            android:textSize="@dimen/condition_text_size"
+            app:layout_constraintEnd_toEndOf="@id/tvTemperature"
+            app:layout_constraintStart_toStartOf="@id/tvTemperature"
+            app:layout_constraintTop_toBottomOf="@id/tvTemperature"
+            tools:text="Rainy" />
+
+        <!-- ========== RAINFALL CARD ========== -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRainfall"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/info_card_height"
+            android:layout_marginTop="@dimen/info_card_margin_top"
+            android:layout_marginHorizontal="@dimen/screen_horizontal_margin"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/background_card_view_semi_transparent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivWeatherIcon"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/card_padding_start"
+                android:paddingEnd="@dimen/card_padding_end">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/iconBgRain"
+                    android:layout_width="@dimen/icon_bg_size"
+                    android:layout_height="@dimen/icon_bg_size"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeWidth="0dp">
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Rainfall"
+                        app:lottie_rawRes="@raw/lottie_umbrella"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/card_label_margin_start"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/rainfall"
+                    android:textColor="#3D2B1F"
+                    android:textSize="@dimen/card_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iconBgRain"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRainfallValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#3D2B1F"
+                    android:textSize="@dimen/card_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/_3cm" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ========== WIND CARD ========== -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardWind"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/info_card_height"
+            android:layout_marginHorizontal="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/info_card_spacing"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/background_card_view_semi_transparent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardRainfall"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/card_padding_start"
+                android:paddingEnd="@dimen/card_padding_end">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/iconBgWind"
+                    android:layout_width="@dimen/icon_bg_size"
+                    android:layout_height="@dimen/icon_bg_size"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeWidth="0dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Wind"
+                        app:lottie_rawRes="@raw/lottie_windmill"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/card_label_margin_start"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/wind"
+                    android:textColor="#3D2B1F"
+                    android:textSize="@dimen/card_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iconBgWind"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWindValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#3D2B1F"
+                    android:textSize="@dimen/card_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/_19km_h" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ========== HUMIDITY CARD ========== -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardHumidity"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/info_card_height"
+            android:layout_marginHorizontal="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/info_card_spacing"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/background_card_view_semi_transparent"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardWind"
+            app:strokeWidth="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/card_padding_start"
+                android:paddingEnd="@dimen/card_padding_end">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/iconBgHumidity"
+                    android:layout_width="@dimen/icon_bg_size"
+                    android:layout_height="@dimen/icon_bg_size"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeWidth="0dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Humidity"
+                        app:lottie_rawRes="@raw/lottie_raindrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/card_label_margin_start"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/humidity"
+                    android:textColor="#3D2B1F"
+                    android:textSize="@dimen/card_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iconBgHumidity"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvHumidityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#3D2B1F"
+                    android:textSize="@dimen/card_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/_64" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ========== TAB BAR ========== -->
+        <TextView
+            android:id="@+id/tabToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/screen_horizontal_margin"
+            android:layout_marginTop="@dimen/tab_margin_top"
+            android:textSize="@dimen/tab_text_size"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/today"
+            android:textColor="#1C1C1C"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardHumidity" />
+
+        <!-- Indicator under TODAY -->
+        <View
+            android:id="@+id/tabTodayIndicator"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="#1C1C1C"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/tabToday"
+            app:layout_constraintStart_toStartOf="@id/tabToday"
+            app:layout_constraintTop_toBottomOf="@id/tabToday" />
+
+        <!--
+            ✅ Fixed: tabTomorrowIndicator top constraint was "@id/tabToday" — it rendered
+               at the same vertical position as tabTodayIndicator, overlapping it.
+               Corrected to "@id/tabTomorrow" so it sits properly under the Tomorrow tab.
+        -->
+        <View
+            android:id="@+id/tabTomorrowIndicator"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:background="#1C1C1C"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@id/tabTomorrow"
+            app:layout_constraintStart_toStartOf="@id/tabTomorrow"
+            app:layout_constraintTop_toBottomOf="@id/tabTomorrow" />
+
+        <TextView
+            android:id="@+id/tabTomorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/tab_between_spacing"
+            android:fontFamily="sans-serif"
+            android:text="@string/tomorrow"
+            android:textColor="#C78D64"
+            android:textSize="@dimen/tab_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/tabToday"
+            app:layout_constraintStart_toEndOf="@id/tabToday"
+            app:layout_constraintTop_toTopOf="@id/tabToday" />
+
+        <TextView
+            android:id="@+id/tabNext7Days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:fontFamily="sans-serif"
+            android:layout_marginEnd="@dimen/screen_horizontal_margin"
+            android:text="@string/next_7_days"
+            android:textColor="#dfa274"
+            android:textSize="@dimen/tab_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/tabToday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tabToday" />
+
+        <!-- ========== HOURLY RECYCLERVIEW ========== -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHourly"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/hourly_margin_top"
+            android:paddingStart="@dimen/screen_horizontal_margin"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingEnd="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabTodayIndicator"
+            tools:listitem="@layout/item_hourly_weather"/>
+
+        <!-- ========== SHIMMER SKELETON OVERLAY ========== -->
+        <!--
+            Sits on top of all real views. Visible while isLoading = true.
+            Each skeleton shape mirrors the real UI element it replaces.
+            ShimmerFrameLayout sweeps a highlight across all children automatically.
+        -->
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:shimmer_base_color="#28573C28"
+            app:shimmer_highlight_color="#55FFFFFF"
+            app:shimmer_duration="1200"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Inner LinearLayout mirrors the vertical flow of the real layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="16dp">
+
+                <!-- ── Row 1: City name + search button ── -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="72dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/skeleton_shape"
+                        android:alpha="0.55"/>
+
+                    <View
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/skeleton_shape_round"
+                        android:alpha="0.55"/>
+
+                </LinearLayout>
+
+                <!-- ── Row 2: Date ── -->
+                <View
+                    android:layout_width="130dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/skeleton_shape"
+                    android:alpha="0.45"/>
+
+                <!-- ── Row 3: Icon + Temp side by side ── -->
+                <!-- marginTop="40dp" matches ivWeatherIcon's layout_marginTop -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="24dp"
+                    android:layout_marginTop="40dp">
+
+                    <!-- Icon skeleton: exactly 150×150dp -->
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/skeleton_shape"
+                        android:alpha="0.5"/>
+
+                    <!-- Temp + condition column, pushed down 25dp to match tvTemperature's marginTop -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical"
+                        android:paddingTop="25dp"
+                        android:gravity="start">
+
+                        <!-- Temperature number: 60sp bold ~72dp tall -->
+                        <View
+                            android:layout_width="110dp"
+                            android:layout_height="72dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/skeleton_shape"
+                            android:alpha="0.5"/>
+
+                        <!-- Condition label: 15sp ~16dp tall, marginTop="2dp" -->
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/skeleton_shape"
+                            android:alpha="0.40"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- ── Row 4: Rainfall card ── -->
+                <!-- marginTop="30dp" matches cardRainfall's layout_marginTop after ivWeatherIcon -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/skeleton_shape"
+                    android:alpha="0.5"/>
+
+                <!-- ── Row 5: Wind card ── -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skeleton_shape"
+                    android:alpha="0.5"/>
+
+                <!-- ── Row 6: Humidity card ── -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skeleton_shape"
+                    android:alpha="0.5"/>
+
+                <!-- ── Row 7: Tab bar ── -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:layout_marginTop="35dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="52dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/skeleton_shape"
+                        android:alpha="0.55"/>
+
+                    <View
+                        android:layout_width="72dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="22dp"
+                        android:background="@drawable/skeleton_shape"
+                        android:alpha="0.45"/>
+
+                    <View
+                        android:layout_width="68dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="22dp"
+                        android:background="@drawable/skeleton_shape"
+                        android:alpha="0.40"/>
+
+                </LinearLayout>
+
+                <!-- Tab indicator -->
+                <View
+                    android:layout_width="52dp"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skeleton_shape"
+                    android:alpha="0.55"/>
+
+                <!-- ── Row 8: Hourly pill cards ── -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/skeleton_shape_pill"
+                        android:alpha="0.55"/>
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/skeleton_shape_pill"
+                        android:alpha="0.50"/>
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/skeleton_shape_pill"
+                        android:alpha="0.45"/>
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/skeleton_shape_pill"
+                        android:alpha="0.40"/>
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/skeleton_shape_pill"
+                        android:alpha="0.35"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <!-- ========== PERMISSION DENIED OVERLAY ========== -->
+        <LinearLayout
+            android:id="@+id/layoutPermissionOverlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_gradient"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Turn on the &quot;Location&quot; permission"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/location_permission_is_required_to_provide_weather_information_for_your_current_location"
+                android:textColor="#DDFFFFFF"
+                android:textSize="15sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/btnOverlaySettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#30FFFFFF"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="32dp"
+                    android:paddingTop="14dp"
+                    android:paddingEnd="32dp"
+                    android:paddingBottom="14dp"
+                    android:text="@string/settings"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
