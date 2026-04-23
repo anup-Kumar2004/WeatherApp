@@ -22,16 +22,11 @@
 
 ## 📱 Screenshots
 
-> *Add your screenshots here by replacing the placeholder paths below*
-
 <div align="center">
 
 | Home Screen | Tomorrow's Forecast | 7-Day Weekly View | City Search |
 |:-----------:|:-------------------:|:-----------------:|:-----------:|
-| <img src="screenshots/home.jpeg" width="180"/> |
-| <img src="screenshots/tomorrow.jpeg" width="180"/> |
-| <img src="screenshots/weekly.jpeg" width="180"/> |
-| <img src="screenshots/search.jpeg" width="180"/> |
+| <img src="screenshots/home.jpeg" width="160"/> | <img src="screenshots/tomorrow.jpeg" width="160"/> | <img src="screenshots/weekly.jpeg" width="160"/> | <img src="screenshots/search.jpeg" width="160"/> |
 
 </div>
 
