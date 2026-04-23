@@ -28,7 +28,10 @@
 
 | Home Screen | Tomorrow's Forecast | 7-Day Weekly View | City Search |
 |:-----------:|:-------------------:|:-----------------:|:-----------:|
-| <img src="screenshots/home.png" width="180"/> | <img src="screenshots/tomorrow.png" width="180"/> | <img src="screenshots/weekly.png" width="180"/> | <img src="screenshots/search.png" width="180"/> |
+| <img src="screenshots/home.jpeg" width="180"/> |
+| <img src="screenshots/tomorrow.jpeg" width="180"/> |
+| <img src="screenshots/weekly.jpeg" width="180"/> |
+| <img src="screenshots/search.jpeg" width="180"/> |
 
 </div>
 
