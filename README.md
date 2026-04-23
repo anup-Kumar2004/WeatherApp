@@ -267,7 +267,7 @@ Built with ❤️ as part of my Android development journey.
 <br/>
 
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/anup-Kumar2004)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/https://www.linkedin.com/in/anup-kumar-03b0b1354/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Brh41XabrS5eYP1jbwN6Z8A%3D%3D)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/anup-kumar-03b0b1354)
 
 </div>
 
