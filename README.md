@@ -17,7 +17,37 @@
 
 ---
 
-[![Download APK](https://img.shields.io/badge/Download-APK%20v1.0-brightgreen?style=for-the-badge&logo=android)](https://github.com/anup-Kumar2004/WeatherApp/releases/latest/download/app-release.apk)
+## 📥 Download & Install
+
+<div align="center">
+
+### Try the app right now on your Android phone!
+
+<br/>
+
+[![Download APK](https://img.shields.io/badge/⬇️%20DOWNLOAD%20APK%20v1.0-Click%20Here%20to%20Install-2ea44f?style=for-the-badge&logoColor=white)](https://github.com/anup-Kumar2004/WeatherApp/releases/latest/download/app-release.apk)
+
+<br/>
+
+> ⚠️ **First time installing?** You may need to allow installs from unknown sources.
+> Go to **Settings → Security → Install unknown apps** and allow your browser or file manager.
+
+<br/>
+
+| Step | Action |
+|:----:|--------|
+| **1** | 📲 Tap the green **Download APK** button above on your Android phone |
+| **2** | 📂 Open the downloaded file from your notifications or Downloads folder |
+| **3** | ✅ Tap **Install** when prompted |
+| **4** | 🌤️ Open **WeatherApp** and enjoy! |
+
+<br/>
+
+**Requirements:** Android 9.0 (API 28) or higher · ~5MB · No account needed
+
+</div>
+
+---
 
 </div>
 
