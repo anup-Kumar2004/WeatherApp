@@ -8,11 +8,10 @@
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![API](https://img.shields.io/badge/Min%20API-28%20(Android%209)-orange?style=for-the-badge)](https://developer.android.com)
 [![Architecture](https://img.shields.io/badge/Architecture-MVVM-blue?style=for-the-badge)](https://developer.android.com/topic/architecture)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 <br/>
 
-> *Real-time weather forecasts wrapped in a warm, elegant UI — built with modern Android best practices*
+> *Real-time weather forecast app build with modern ui practices*
 
 <br/>
 
